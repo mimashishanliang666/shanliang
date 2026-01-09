@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>致郑冉的表白信</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            text-align: center;
+            animation: fadeIn 1s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        h1 {
+            color: #e74c3c;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            animation: heartbeat 2s ease-in-out infinite;
+        }
+        
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            14%, 40% {
+                transform: scale(1.1);
+            }
+            28%, 56% {
+                transform: scale(1);
+            }
+        }
+        
+        .message {
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        
+        .message p {
+            margin-bottom: 15px;
+        }
+        
+        .signature {
+            font-size: 1.5em;
+            color: #e74c3c;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+        
+        .hearts {
+            position: relative;
+            margin: 30px 0;
+        }
+        
+        .heart {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: #e74c3c;
+            transform: rotate(-45deg);
+            margin: 0 10px;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .heart:before,
+        .heart:after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #e74c3c;
+            border-radius: 50%;
+        }
+        
+        .heart:before {
+            top: -10px;
+            left: 0;
+        }
+        
+        .heart:after {
+            left: 10px;
+            top: 0;
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: rotate(-45deg) translateY(0);
+                opacity: 1;
+            }
+            50% {
+                transform: rotate(-45deg) translateY(-10px);
+                opacity: 0.8;
+            }
+        }
+        
+        .heart:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+        
+        .heart:nth-child(3) {
+            animation-delay: 1s;
+        }
+        
+        .heart:nth-child(4) {
+            animation-delay: 1.5s;
+        }
+        
+        .heart:nth-child(5) {
+            animation-delay: 2s;
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .message {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>亲爱的郑冉</h1>
+        
+        <div class="hearts">
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+        </div>
+        
+        <div class="message">
+            <p>当我第一次见到你，就被你的笑容深深吸引。</p>
+            <p>你的每一个眼神，每一次说话的声音，都让我心动不已。</p>
+            <p>我想告诉你：</p>
+            <p style="font-size: 1.5em; color: #e74c3c; margin: 20px 0;">我喜欢你，郑冉！</p>
+            <p>愿意和我一起，走过人生的每一个春夏秋冬吗？</p>
+        </div>
+        
+        <div class="signature">
+            爱你的人
+        </div>
+        
+        <div class="hearts">
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+        </div>
+    </div>
+    
+    <script>
+        // 简单的交互效果
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.querySelector('.container');
+            let clickCount = 0;
+            
+            container.addEventListener('click', function() {
+                clickCount++;
+                if (clickCount === 3) {
+                    alert('谢谢你的点击！希望你喜欢这份心意 ❤️');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
